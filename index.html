@@ -3,10 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>EverGreen - Real Estate</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <header>
+    <nav>
+      <div class="logo">
+        <h1>EverGreen</h1>
+      </div>
+      <div>
+        <ul class="navlinks">
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Property List</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="nav-buttons">
+        <div class="lang">
+          <i class="fa-solid fa-globe"></i>
+          <span>Eng</span>
+        </div>
+        <a class="signup" href="#">Sign Up</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-top">
+        <div class="hero-tags">
+          <span>House</span>
+          <span>Apartment</span>
+          <span>Residential</span>
+        </div>
+        <div class="hero-content">
+          <div class="hero-heading">Build Your Future, One Property at a Time.</div>
+          <div class="hero-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci blanditiis ipsa ipsum. Placeat eius mollitia facere asperiores laborum. Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+        </div>
+      </div>
+      
+      <div class="hero-bottom">
+        <h2 class="search-title">Find the best place</h2>
+        <form class="search-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="looking-for">Looking for</label>
+              <input type="text" id="looking-for" placeholder="Enter type">
+            </div>
+            <div class="form-group">
+              <label for="price">Price</label>
+              <select id="price">
+                <option value="">Price</option>
+                <option value="low">Under $100k</option>
+                <option value="mid">$100k - $500k</option>
+                <option value="high">$500k+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="location">Locations</label>
+              <select id="location">
+                <option value="">Location</option>
+                <option value="downtown">Downtown</option>
+                <option value="suburb">Suburb</option>
+                <option value="rural">Rural</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="rooms">Number of rooms</label>
+              <select id="rooms">
+                <option value="">2 Bed rooms</option>
+                <option value="1">1 Bedroom</option>
+                <option value="2">2 Bedrooms</option>
+                <option value="3">3 Bedrooms</option>
+                <option value="4">4+ Bedrooms</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="filter-options">
+            <span class="filter-label">Filter:</span>
+            <div class="filter-tags">
+              <div class="filter-btns">
+                <button type="button">City</button>
+                <button type="button">House</button>
+                <button type="button">Residential</button>
+                <button type="button">Apartment</button>
+              </div>
+              <div class="search-actions">
+                <button type="submit" class="search-button">Search Properties</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </header>
 </body>
 </html>
