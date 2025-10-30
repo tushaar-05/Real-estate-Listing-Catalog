@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Urbanist', sans-serif;
+  font-family: 'Raleway', sans-serif;
   background-color: white;
   overflow-x: hidden;
   height: 400vh;
@@ -29,7 +29,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1.3rem 5rem;
-  position: relative; /* Change back to relative */
+  position: relative;
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -41,7 +41,7 @@ nav {
 }
 
 .navlinks {
-  position: fixed; /* Make navlinks fixed */
+  position: fixed;
   top: 1.3rem;
   left: 50%;
   transform: translateX(-50%);
@@ -218,7 +218,7 @@ nav {
   border: none;
   border-radius: 15px;
   background-color: #f5f5f5;
-  font-family: 'Urbanist', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   color: #666;
   outline: none;
@@ -272,7 +272,7 @@ nav {
   border: none;
   border-radius: 20px;
   background-color: #f5f5f5;
-  font-family: 'Urbanist', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 0.95rem;
   color: #666;
   cursor: pointer;
@@ -300,7 +300,7 @@ nav {
   border-radius: 30px;
   background-color: black;
   color: white;
-  font-family: 'Urbanist', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
@@ -341,7 +341,7 @@ nav {
   width: 170px;
   height: 80px;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('/Real-estate-Listing-Catalog/images/image.png');
+    url('/images/image.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -483,7 +483,7 @@ nav {
   border-radius: 30px;
   background-color: white;
   color: black;
-  font-family: 'Urbanist', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
   cursor: pointer;
@@ -531,6 +531,7 @@ nav {
 }
 
 .emrtr span{
+  font-family: 'poppins';
   font-size: 1.5rem;
   font-weight: 500;
 }
@@ -541,7 +542,7 @@ nav {
   border-radius: 30px;
   background-color: black;
   color: white;
-  font-family: 'Urbanist', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
   cursor: pointer;
@@ -640,4 +641,57 @@ nav {
   color: rgba(0, 0, 0, 0.5);
   font-weight: 400;
   margin: 0;
+}
+
+.map-section{
+  height: 450px;
+  background-color: rgb(248,248,248);
+  display: flex;
+  padding: 5rem 8rem 5rem 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-img{
+  height: 340px;
+}
+
+.map-img img{
+  height: 100%;
+  border-radius: 50px;
+}
+
+.map-content{
+  padding-left: 100px;
+}
+
+.map-content h3{
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.map-content p{
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.map-content button{
+  padding: 1.2rem 3rem;
+  border: none;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.map-content button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
