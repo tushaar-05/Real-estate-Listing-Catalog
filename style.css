@@ -10,16 +10,17 @@ body {
   font-family: 'Urbanist', sans-serif;
   background-color: white;
   overflow-x: hidden;
+  height: 400vh;
 }
 
 header {
   background: 
-    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url('https://images.unsplash.com/photo-1597682496035-b04f723202a4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1738');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -28,9 +29,9 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1.3rem 5rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  position: relative; /* Change back to relative */
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .logo h1 {
@@ -40,6 +41,11 @@ nav {
 }
 
 .navlinks {
+  position: fixed; /* Make navlinks fixed */
+  top: 1.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
   display: flex;
   gap: 0.6rem;
   padding: 1rem 0.5rem;
@@ -63,6 +69,13 @@ nav {
   color: black;
 }
 
+.nav-buttons a{
+  position: fixed;
+  top: 1.3rem;
+  right: 5rem;
+  z-index: 100;
+}
+
 .nav-buttons {
   display: flex;
   gap: 1rem;
@@ -78,6 +91,8 @@ nav {
   padding: 1rem 2rem;
   border-radius: 30px;
   font-size: 1.1rem;
+  margin-right: 9rem;
+  cursor: pointer;
 }
 
 .signup {
@@ -100,7 +115,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
 }
 
 .hero-top {
@@ -113,6 +128,7 @@ nav {
 .hero-tags {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .hero-tags span {
@@ -136,6 +152,7 @@ nav {
   justify-content: space-between;
   align-items: flex-end;
   gap: 3rem;
+  flex-wrap: wrap;
 }
 
 .hero-heading {
@@ -161,6 +178,7 @@ nav {
   border-radius: 30px;
   padding: 2.5rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  margin-top: 3rem;
 }
 
 .search-title {
@@ -224,8 +242,8 @@ nav {
 .filter-options {
   display: flex;
   align-items: center;
-  
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .filter-label {
@@ -236,11 +254,17 @@ nav {
 
 .filter-tags {
   display: flex;
-  /* gap: 0.8rem; */
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
   width: 100%;
+  gap: 1rem;
+}
+
+.filter-btns {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
 }
 
 .filter-btns button {
@@ -287,4 +311,333 @@ nav {
   background-color: #333;
   transform: translateY(-2px);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.explore{
+  padding: 5.7rem;
+}
+
+.explore-top{
+  display: flex;
+  margin-bottom: 2rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7rem;
+}
+
+.etl{
+  max-width: 60%;
+  margin-bottom: 1rem;
+}
+
+.etl h3{
+  font-size: 4.6rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.video-player {
+  position: relative;
+  width: 170px;
+  height: 80px;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('/Real-estate-Listing-Catalog/images/image.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 70px;
+}
+
+.etr {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.play-btn i{
+  background-color: white;
+  padding: 0.6rem 0.8rem 0.6rem 1rem;
+  border-radius: 50%;
+  color: black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.explore-middle{
+  height: 550px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem;
+  overflow: hidden;
+}
+
+.eml{
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 60px;
+}
+
+.img-container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.img-container img{
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.emr{
+  border-radius: 60px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.emrt{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem;
+  flex: 1;
+}
+
+.img-choose{
+  position: absolute;
+  background-color: white;
+  height: 90px;
+  bottom: 25px;
+  right: 25px;
+  z-index: 99999;
+  width: 280px;
+  border-radius: 55px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.img-1, .img-2, .img-3{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.img-choose img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.activeimg{
+  border: 3px solid rgba(59, 235, 59, 0.769);
+}
+
+.emrtl{
+  height: 100%;
+  background-color: rgb(248,248,248);
+  border-radius: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3rem;
+  gap: 2rem;
+}
+
+.emrtl h5{
+  font-size: 2rem;
+  color: black;
+  font-weight: 500;
+}
+
+.emrtl p{
+  font-size: 1.1rem;
+  opacity: 0.5;
+}
+
+.emrtl button{
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 30px;
+  background-color: white;
+  color: black;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.emrtl button:hover{
+  background-color: rgba(173, 227, 125, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.emrtr{
+  height: 100%;
+  background-color: rgb(248,248,248);
+  border-radius: 50px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.emrtr img{
+  width: 100%;
+  height: 290px;
+  border-radius: 50px;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-bottom: 20px;
+}
+
+.price{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.emrtr h5{
+  font-size: 1.5rem;
+  color: black;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.emrtr span{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.emrtr button{
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 0.5rem; 
+}
+
+.emrtr button:hover{
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.emrb{
+  height: 100px;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+}
+
+.emrb p{
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+  max-width: 70%;
+  line-height: 1.5;
+}
+
+.emrb-nav{
+  display: flex;
+  gap: 1rem;
+}
+
+.emrb-nav button{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+}
+
+.emrb-nav button:hover{
+  background-color: black;
+  color: white;
+  border-color: black;
+  transform: scale(1.05);
+}
+
+.emrb-nav button:last-child{
+  border-color: black;
+}
+
+.emrb-nav button:last-child:hover{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.explore-bottom{
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+.stat-item{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-right: 7rem;
+  border-right: 2px solid rgba(0, 0, 0, 0.668);
+}
+
+.stat-item:last-child{
+  border-right: none;
+}
+
+.stat-item h2{
+  font-size: 4rem;
+  font-weight: 600;
+  color: black;
+  margin: 0;
+  line-height: 1;
+}
+
+.stat-item p{
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  margin: 0;
 }
