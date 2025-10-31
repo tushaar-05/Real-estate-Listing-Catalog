@@ -1289,11 +1289,13 @@ footer {
   font-weight: 600;
   color: #1a1a1a;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
 }
 
 .footer-phone:hover {
   color: #666;
+  transform: translateX(-3px);
 }
 
 .footer-middle {
@@ -1316,11 +1318,13 @@ footer {
   font-size: 1.05rem;
   color: #4a4a4a;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
 }
 
 .footer-nav a:hover {
   color: #1a1a1a;
+  transform: translateY(-2px);
 }
 
 .footer-logo {
@@ -1328,6 +1332,11 @@ footer {
   font-weight: 600;
   color: #1a1a1a;
   text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.footer-logo:hover {
+  opacity: 0.7;
 }
 
 .footer-nav-right {
@@ -1340,11 +1349,13 @@ footer {
   font-size: 1.05rem;
   color: #4a4a4a;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
 }
 
 .footer-nav-right a:hover {
   color: #1a1a1a;
+  transform: translateY(-2px);
 }
 
 .footer-bottom {
@@ -1371,9 +1382,11 @@ footer {
   font-size: 1rem;
   color: #666;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
 }
 
 .footer-legal a:hover {
   color: #1a1a1a;
+  transform: translateY(-2px);
 }
