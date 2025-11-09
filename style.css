@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -32,6 +33,12 @@ nav {
   position: relative;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .logo h1 {
@@ -109,6 +116,48 @@ nav {
   background-color: rgb(173, 227, 125);
   transform: translateY(-2px);
 }
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger-icon {
+  width: 25px;
+  height: 20px;
+  position: relative;
+  margin-top: -45px;
+}
+
+.hamburger-icon span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+}
+
+.hamburger-icon span:nth-child(1) {
+  top: 0px;
+}
+
+.hamburger-icon span:nth-child(2) {
+  top: 8px;
+}
+
+.hamburger-icon span:nth-child(3) {
+  top: 16px;
+}
+
 
 .hero {
   padding: 3rem 5rem;
@@ -481,7 +530,7 @@ nav {
 
 .emrtl button{
   padding: 1rem 2.5rem;
-  border: none;
+  border: 0.5px solid rgba(0, 0, 0, 0.157);
   border-radius: 30px;
   background-color: white;
   color: black;
@@ -1389,4 +1438,549 @@ footer {
 .footer-legal a:hover {
   color: #1a1a1a;
   transform: translateY(-2px);
+}
+
+@media (max-width: 1023px) {
+  nav {
+    padding: 1.3rem 2rem;
+    gap: 1.5rem;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 400px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 100px 2rem 2rem 2rem;
+    transition: all 0.4s ease;
+    z-index: 999;
+  }
+  
+  .navlinks {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    width: 100%;
+    background: none;
+    padding: 0;
+    gap: 1rem;
+  }
+
+  .navlinks a {
+    display: block;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .nav-buttons {
+    order: 2;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    order: 2;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .lang {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .signup {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .hero {
+    padding: 2rem 2rem;
+  }
+  
+  .hero-top {
+    margin-top: 10rem;
+  }
+  
+  .hero-heading {
+    font-size: 3.5rem;
+    max-width: 100%;
+  }
+  
+  .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  .hero-text {
+    max-width: 100%;
+    padding-right: 0;
+  }
+  
+  .form-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .explore {
+    padding: 3rem 2rem;
+  }
+  
+  .explore-top {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .etl {
+    max-width: 100%;
+  }
+  
+  .etl h3 {
+    font-size: 3rem;
+  }
+  
+  .explore-middle {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 1.5rem;
+  }
+  
+  .emr {
+    gap: 1rem;
+  }
+  
+  .emrt {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .emrtl,
+  .emrtr {
+    height: 400px;
+  }
+  
+  .emrb {
+    height: auto;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .emrtr button{
+    display: none;
+  }
+
+  .emrtr h5, span{
+    margin-top: 20px;
+  }
+  
+  .emrb p {
+    max-width: 100%;
+  }
+  
+  .explore-bottom {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .stat-item {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.668);
+    padding-bottom: 2rem;
+  }
+  
+  .stat-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .map-section {
+    flex-direction: column;
+    height: auto;
+    gap: 3rem;
+    padding: 3rem 2rem;
+  }
+  
+  .map-img {
+    height: 300px;
+    width: 100%;
+  }
+  
+  .map-img img {
+    width: 100%;
+  }
+  
+  .map-content {
+    padding-left: 0;
+    text-align: center;
+  }
+  
+  .map-content h3 {
+    font-size: 2.5rem;
+  }
+  
+  .properties-list {
+    padding: 0 2rem 3rem 2rem;
+  }
+  
+  .properties-list h4 {
+    font-size: 3rem;
+  }
+  
+  .properties-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .property-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .faq {
+    padding: 0 2rem 3rem 2rem;
+  }
+  
+  .faq-header {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .faq-title {
+    font-size: 2.5rem;
+  }
+  
+  .faq-answer-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .faq-answer-image {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .testimonials {
+    padding: 30px 2rem 3rem 2rem;
+  }
+  
+  .testimonials-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  .testimonial-card {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .testimonial-image {
+    width: 100%;
+    height: 400px;
+  }
+  
+  .testimonial-content {
+    height: auto;
+    padding: 2rem;
+  }
+  
+  .testimonial-text {
+    font-size: 1.5rem;
+  }
+  
+  .footer-container {
+    padding: 0 2rem;
+  }
+  
+  .footer-top {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .footer-right {
+    align-items: flex-start;
+  }
+  
+  .footer-address {
+    text-align: left;
+  }
+  
+  .footer-middle {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .footer-nav,
+  .footer-nav-right {
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  nav {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+  
+  .navlinks {
+    flex-wrap: wrap;
+    padding: 0.8rem;
+  }
+  
+  .navlinks a {
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+  }
+  
+  .lang,
+  .signup {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .hero {
+    padding: 1rem;
+  }
+  
+  .hero-top {
+    margin-top: 8rem;
+  }
+  
+  .hero-heading {
+    font-size: 2.5rem;
+  }
+  
+  .hero-tags span {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+  
+  .hero-bottom {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+  
+  .search-title {
+    font-size: 1.5rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-tags {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .filter-btns {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .filter-btns button {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .explore {
+    padding: 2rem 1rem;
+  }
+  
+  .etl h3 {
+    font-size: 2.2rem;
+  }
+  
+  .video-player {
+    width: 140px;
+    height: 70px;
+  }
+  
+  .img-choose {
+    width: 250px;
+    height: 80px;
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .img-1, .img-2, .img-3 {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .emrtl,
+  .emrtr {
+    height: 350px;
+    padding: 2rem;
+  }
+  
+  .emrtl h5 {
+    font-size: 1.5rem;
+  }
+  
+  .emrtr h5,
+  .emrtr span {
+    font-size: 1.2rem;
+  }
+  
+  .stat-item h2 {
+    font-size: 3rem;
+  }
+  
+  .map-section {
+    padding: 2rem 1rem;
+  }
+  
+  .map-content h3 {
+    font-size: 2rem;
+  }
+  
+  .map-content p {
+    font-size: 1rem;
+  }
+  
+  .properties-list {
+    padding: 0 1rem 2rem 1rem;
+    margin: 3rem 0;
+  }
+  
+  .properties-list h4 {
+    font-size: 2.2rem;
+  }
+  
+  .property-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .property-card {
+    border-radius: 15px;
+  }
+  
+  .card-content {
+    padding: 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+  }
+  
+  .faq {
+    padding: 0 1rem 2rem 1rem;
+  }
+  
+  .faq-title {
+    font-size: 2rem;
+  }
+  
+  .faq-question {
+    padding: 1.5rem;
+  }
+  
+  .faq-question h3 {
+    font-size: 1.2rem;
+  }
+  
+  .faq-answer-content {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+  
+  .testimonials {
+    padding: 30px 1rem 2rem 1rem;
+  }
+  
+  .testimonials-title {
+    font-size: 2rem;
+  }
+  
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+  
+  .testimonial-image {
+    height: 300px;
+  }
+  
+  .testimonial-content {
+    padding: 1.5rem;
+    border-radius: 30px;
+  }
+  
+  .quote-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .testimonial-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonial-author {
+    font-size: 1.3rem;
+  }
+  
+  .cta-title {
+    font-size: 2.5rem;
+  }
+  
+  .cta-description {
+    font-size: 1.1rem;
+  }
+  
+  .cta-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .footer-container {
+    padding: 0 1rem;
+  }
+  
+  .footer-title {
+    font-size: 2.2rem;
+  }
+  
+  .footer-nav,
+  .footer-nav-right {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .footer-legal {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
 }

@@ -13,20 +13,30 @@
       <div class="logo">
         <h1>EverGreen</h1>
       </div>
-      <div>
+      
+      <div class="hamburger-menu">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="nav-menu">
         <ul class="navlinks">
           <li><a class="active" href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Property List</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="#explore">About Us</a></li>
+          <li><a href="#properties">Property List</a></li>
+          <li><a href="#footer">Contact Us</a></li>
         </ul>
-      </div>
-      <div class="nav-buttons">
-        <div class="lang">
-          <i class="fa-solid fa-globe"></i>
-          <span>Eng</span>
+        
+        <div class="nav-buttons">
+          <div class="lang">
+            <i class="fa-solid fa-globe"></i>
+            <span>Eng</span>
+          </div>
+          <a class="signup" href="#">Sign Up</a>
         </div>
-        <a class="signup" href="#">Sign Up</a>
       </div>
     </nav>
 
@@ -197,7 +207,7 @@
     </div>
   </section>
 
-  <section class="properties-list">
+  <section class="properties-list" id="properties">
     <h4>Explore our premier houses</h4>
     <div class="properties-content">
       <p>Each listing offers unique features, exception quality, and prime locations, <br> ensuring an exclusive living exprience.</p>
@@ -469,13 +479,13 @@
   </section>
 
   <footer>
-    <div class="footer-container">
+    <div class="footer-container" id="footer">
       <div class="footer-top">
         <div class="footer-left">
           <h2 class="footer-title">Discover Nature's <span style="opacity: 0.7;">Wonders with Expert Guidance</span></h2>
         </div>
         <div class="footer-right">
-          <p class="footer-address">Newton School of Engineering,<br>Pune.</p>
+          <p class="footer-address">Newton School of Technology,<br>ADYPU</p>
           <a style="font-family: 'poppins'; font-size: 17px;" href="tel:+18398498483" class="footer-phone">(+91)12345 - 12345</a>
         </div>
       </div>
@@ -483,8 +493,8 @@
       <div class="footer-middle">
         <nav class="footer-nav">
           <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Properties</a>
+          <a href="#explore">About</a>
+          <a href="#properties">Properties</a>
           <a href="#">Services</a>
         </nav>
         <a href="#" class="footer-logo">EverGreen</a>
