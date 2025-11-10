@@ -16,8 +16,8 @@ body {
 
 header {
   background: 
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('/images/hero-bg.png');
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/images/hero-bg.webp');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -200,12 +200,12 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 3rem;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
 .hero-heading {
-  font-size: 5rem;
+  font-size: 4.5rem;
   font-weight: 500;
   color: white;
   line-height: 1.1;
